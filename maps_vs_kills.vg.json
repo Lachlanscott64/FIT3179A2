@@ -1,0 +1,32 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "width": 450,
+      "height": 250,
+      "title": "Maps vs Total Kills",
+      "data": {
+        "url": "https://raw.githubusercontent.com/Lachlanscott64/FTI3179/main/hltv_playerStats-complete.csv"
+      },
+      "mark": "circle",
+      "encoding": {
+        "x": {
+          "field": "maps_played",
+          "type": "quantitative",
+          "title": "Total Number of Kills"
+        },
+        "y": {
+          "field": "total_kills",
+          "type": "quantitative",
+          "title": "Number of Maps Played"
+        },
+        "color":{
+          "value": "darkblue"
+        },
+        "tooltip": [
+          {"field": "nick", "type": "nominal", "title": "Player Name:"},
+          {"field": "country", "type": "nominal", "title": "Country"},
+          {"field": "maps_played", "type": "quantitative", "title": "Number of Maps Played", "format": ","},
+          {"field": "total_kills", "type": "quantitative", "title": "Total Number of Kills", "format": ","}
+        ]
+        
+      }    
+  }

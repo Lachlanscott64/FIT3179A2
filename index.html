@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+</head>
+<body>
+    
+    <div class="page">
+
+        <div>
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                <h1>Counter-Strike Professional Players</h1>
+                </div>
+            </div>
+        </div>
+
+        <h2>Where are most players from?</h2>
+
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+            </div>
+            </div>
+            <div class="pure-u-1-2">
+            <div id="vis1" class="vis-container"></div>
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+            </div>
+            </div>
+            <div class="pure-u-1-2">
+            <div id="vis2" class="vis-container"></div>
+            </div>
+        </div>
+
+        <h2>Who has played the most?</h2>
+
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+            </div>
+            </div>
+            <div class="pure-u-1-2">
+            <div id="vis4" class="vis-container"></div>
+            </div>
+        </div>
+
+        <div id="maps_bar_chart"></div>
+
+        <script type="text/javascript">
+    
+        // var spec2 = "js/stacked_bar_chart.vg.json";
+        var vg_1 = "maps_played_bar.vg.json"
+
+        vegaEmbed('#maps_bar_chart', vg_1).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+        </script>
+
+
+    </div>
+
+    <script type="text/javascript">
+        var specVis1 = "./player_countries_bar.vg.json";
+        var specVis2 = "./kd_ratio_vs_kpr_hist.vg.json";
+        var specVis3 = "./maps_played_bar.vg.json";
+        var specVis4 = "./maps_vs_kills.vg.json"
+    
+        vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
+        }).catch(console.error);
+
+        vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+
+        }).catch(console.error);
+
+        vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
+
+        }).catch(console.error);
+
+        vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+
+        }).catch(console.error);
+    
+    </script>
+
+
+
+</body>
+</html>

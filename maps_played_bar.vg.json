@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "width": 950,
+      "height": 400,
+      "title": "Players by Maps Played",
+      "data": {
+        "url": "https://raw.githubusercontent.com/Lachlanscott64/FTI3179/main/hltv_playerStats-complete.csv"
+      },
+      "params": [
+        {
+          "name": "Maps_Above",
+          "value": 1250,
+          "bind": {
+            "input": "range",
+            "min": 1250,
+            "max": 2000,
+            "step": 10,
+            "name": "Minimum Maps Played"
+          }
+        }
+      ],
+      "transform": [
+        {"filter": "datum.maps_played > Maps_Above"}
+      ],
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": "nick",
+          "type":"ordinal",
+          "title": "Player"
+        },
+        "y": {
+          "field": "maps_played",
+          "type":"quantitative",
+          "title": "Number of Maps Played"
+        },
+        "tooltip": [
+          {"field": "nick", "type": "ordinal", "title": "Player Name"},
+          {"field": "maps_played", "type": "quantitative", "title": "Number of Maps Played"},
+          {"field": "country", "type": "ordinal", "title": "Country"}
+        ],
+        "color":{
+          "value": "darkblue"
+        }
+      }        
+  }

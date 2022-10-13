@@ -1,0 +1,29 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "width": 375,
+      "height": 250,
+      "title": "Players",
+      "data": {
+        "url": "https://raw.githubusercontent.com/Lachlanscott64/FTI3179/main/hltv_playerStats-complete.csv"
+      },
+      "mark": "rect",
+      "encoding": {
+        "y": {
+          "bin": {"maxbins": 60},
+          "field": "kills_per_round",
+          "type": "quantitative",
+          "title": "Average Kills Per Round"
+        },
+        "x": {
+          "bin": {"maxbins": 60},
+          "field": "kd_ratio",
+          "type": "quantitative",
+          "title": "Kill/Death Ratio"
+        },
+        "color": {
+          "aggregate": "count",
+          "type": "quantitative",
+          "title": "Number of Players"
+        }
+      }    
+  }

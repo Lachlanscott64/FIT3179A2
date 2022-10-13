@@ -1,0 +1,22 @@
+.page {
+    width: 1000px;
+    background-color: white;
+    margin: auto;
+    padding: 50px;
+    padding-top: 35px;
+}
+
+
+body {
+    background-color: lightgray;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+.vis-container {
+    width: 100%;
+}

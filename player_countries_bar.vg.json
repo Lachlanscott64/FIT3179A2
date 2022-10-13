@@ -1,0 +1,23 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "width": 500,
+      "height": 250,
+      "title": "What countries have the most players?",
+      "projection": {"type": "equalEarth"},
+      "data": {
+        "url": "https://raw.githubusercontent.com/Lachlanscott64/FIT3179A2/main/hltv_playerStats-complete.csv"
+      },
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "country", "title": "Country"},
+        "y": {"aggregate": "count", "field": "country", "title": "Number of Players"},
+        "tooltip": [
+          {"field": "country","type": "nominal", "title": "Country"},
+          {"field": "country", "aggregate": "count", "type": "quantitative", "title": "Number of Players"}
+        ],
+        "color":{
+          "value": "darkblue"
+        }
+      }
+  }
+      
