@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
       "width": 375,
       "height": 250,
-      "title": "Players",
+      "title": "How good are most players?",
       "data": {
         "url": "https://raw.githubusercontent.com/Lachlanscott64/FTI3179/main/hltv_playerStats-complete.csv"
       },

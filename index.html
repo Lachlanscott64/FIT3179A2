@@ -33,26 +33,35 @@
         <div class="pure-g">
             <div class="pure-u-1-2">
             <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+                <p>We can see that most players tend to come from Europe or North and South America, this makes sense as this is where Counter-Strike is most popular. </p>
+
+                <br>
+
+                <p>The reason there is so few players in Asia despite gaming being very popular there, is due to the face 
+                    that First Person Shooter (FPS) games arent as popular there compared to other genres, as such Counter-Strike never really took off in that region.
+                </p>
             </div>
             </div>
             <div class="pure-u-1-2">
-            <div id="vis1" class="vis-container"></div>
+            <div id="vis8" class="vis-container"></div>
             </div>
         </div>
 
         <div class="pure-g">
             <div class="pure-u-1-2">
             <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+                <p>The country that has the most players is the USA, this is because the vast majority of players from the North American region are from the USA
+                    while the larger region (Europe) has its players spread out over alot more countries. 
+                </p>
+
+                <br>
+                <br>
+
+                <p>Denmark is the second most popular country in terms of the amount of players, Denmark is very notorious for having a very large amount of players that are some of the best in the world. </p>
             </div>
             </div>
             <div class="pure-u-1-2">
-            <div id="vis2" class="vis-container"></div>
+            <div id="vis1" class="vis-container"></div>
             </div>
         </div>
 
@@ -61,9 +70,12 @@
         <div class="pure-g">
             <div class="pure-u-1-2">
             <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+                <p>The player with the most kills is the swedish player f0rest, however the player with the most number of maps played is the bulgarian player bubble. </p>
+
+                <br>
+                <br>
+
+                <p>Most of the players towards the top of the amount of maps played have been in the professional scene for a really long time, some of them have been playing Counter-Strike for more than a decade.</p>
             </div>
             </div>
             <div class="pure-u-1-2">
@@ -75,13 +87,61 @@
 
         <script type="text/javascript">
     
-        // var spec2 = "js/stacked_bar_chart.vg.json";
         var vg_1 = "maps_played_bar.vg.json"
 
         vegaEmbed('#maps_bar_chart', vg_1).then(function(result) {
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            
         }).catch(console.error);
         </script>
+
+
+        <h2>Who is the best player?</h2>
+
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+            <div>
+                <p>The best player is a tough thing to determine, while we can look at stats alone, they can often be misleading or not tell the whole story. 
+                    However, they can definitley be a good indicator of how good a player likely is.
+                </p>
+
+                <p>If we look at stats alone, we can see two players who seem to stand out quite a bit. Zyw0o and s1mple, these two both appear in the top 5 of all the relevant stats, rating, impact score and kd/ratio.
+                    These two are commonly considered as some of, if not the best players in the world.
+                </p>
+
+                <p class="subheading">But what is rating and impact score?</p>
+
+                <p>Rating is a measure of how well a player plays on average, it is calculated using multiple variables that are measured each round. Impact score is a meausure of how many kills a player gets every round, and how much they will "impact" the average round</p>
+            </div>
+            </div>
+            <div class="pure-u-1-2">
+            <div id="vis7" class="vis-container"></div>
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <div id="vis5" class="vis-container"></div>
+            </div>
+            <div class="pure-u-1-2">
+                <div id="vis6" class="vis-container"></div>
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+            <div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p>Most players tend to sit at a very similar kill/death ratio and also tend to get around the same number of kills each round, however, as we can see, there are a few outliers,
+                    with quite a few players being much better than the rest of their competition. </p>
+            </div>
+            </div>
+            <div class="pure-u-1-2">
+            <div id="vis2" class="vis-container"></div>
+            </div>
+        </div>
 
 
     </div>
@@ -90,7 +150,11 @@
         var specVis1 = "./player_countries_bar.vg.json";
         var specVis2 = "./kd_ratio_vs_kpr_hist.vg.json";
         var specVis3 = "./maps_played_bar.vg.json";
-        var specVis4 = "./maps_vs_kills.vg.json"
+        var specVis4 = "./maps_vs_kills.vg.json";
+        var specVis5 = "./rating_circle.vg.json";
+        var specVis6 = "./impact_score_circle.vg.json";
+        var specVis7 = "./kd_ratio_circle.vg.json";
+        var specVis8 = "./players_countries_map.vg.json"
     
         vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
         }).catch(console.error);
@@ -104,6 +168,22 @@
         }).catch(console.error);
 
         vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+
+        }).catch(console.error);
+
+        vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
+
+        }).catch(console.error);
+
+        vegaEmbed('#vis6', specVis6, { "actions": false }).then(function (result) {
+
+        }).catch(console.error);
+
+        vegaEmbed('#vis7', specVis7, { "actions": false }).then(function (result) {
+
+        }).catch(console.error);
+
+        vegaEmbed('#vis8', specVis8, { "actions": false }).then(function (result) {
 
         }).catch(console.error);
     

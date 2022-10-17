@@ -9,10 +9,10 @@
       "params": [
         {
           "name": "Maps_Above",
-          "value": 1250,
+          "value": 1750,
           "bind": {
             "input": "range",
-            "min": 1250,
+            "min": 1750,
             "max": 2000,
             "step": 10,
             "name": "Minimum Maps Played"
@@ -24,12 +24,12 @@
       ],
       "mark": "bar",
       "encoding": {
-        "x": {
+        "y": {
           "field": "nick",
           "type":"ordinal",
           "title": "Player"
         },
-        "y": {
+        "x": {
           "field": "maps_played",
           "type":"quantitative",
           "title": "Number of Maps Played"
